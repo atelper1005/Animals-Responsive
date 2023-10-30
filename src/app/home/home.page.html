@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Lista de animales
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-input [(ngModel)] = "filtro" placeholder="Introduce el habitat"></ion-input>
+  <ion-grid>
+    <ion-row>
+      <ng-container *ngFor="let item of animals | async">
+        <ion-col *ngIf="filtro=='' || item.habitat.startsWith(filtro)" size-xl="2" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+          <ion-card>
+            <ion-card-content>
+              <img src="https://loremflickr.com/320/240?random=1" />
+              <p><strong>{{ item.id }}</strong></p>
+              <p>{{ item.common_name }} {{ item.science_name }}</p>
+              <p><strong>{{ item.habitat }}</strong></p>
+              <p>{{ item.country }}, {{ item.country_code }}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ng-container>
+    </ion-row>
+  </ion-grid>
+</ion-content>
