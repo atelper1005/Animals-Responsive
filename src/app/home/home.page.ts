@@ -12,7 +12,7 @@ export class HomePage {
   filtro: string = "";
 
   constructor(private httpClient:HttpClient) {
-    this.animals = this.httpClient.get('https://raw.githubusercontent.com/atelper1005/agenda-23-24/master/MOCK_DATA.json');
+    this.animals = this.httpClient.get('https://raw.githubusercontent.com/atelper1005/Animals-Responsive/master/MOCK_DATA.json');
   }
 
   /*constructor(private http:HttpClient) { }

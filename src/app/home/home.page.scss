@@ -26,6 +26,14 @@
   text-decoration: none;
 }
 
+ion-col {
+  background-color: wheat;
+  border: solid 1px #fff;
+  color: #000;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .sc-ion-input-md-h {
   --placeholder-color: initial;
   --placeholder-font-style: initial;
@@ -69,23 +77,21 @@
   }
 
   ion-col {
-    background-color: wheat;
+    background-color: rgb(245, 230, 146);
     border: solid 1px #fff;
     color: #000;
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  
 }
 
 //Estilos pantallas grandes
-@media (min-width: 992px) {
-  #container{
-    background-color: red;
-    font-family: 'Comic Sans MS';
-  }
+@media (min-width: 800px) {
+
   #container strong {
     font-size: 28px;
-
   }
 
   #container p {
@@ -94,7 +100,7 @@
   }
 
   ion-col {
-    background-color: wheat;
+    background-color: rgb(247, 169, 144);
     border: solid 1px #fff;
     color: #000;
     padding-left: 10px;
@@ -107,6 +113,5 @@
   #container {
     background-color: darkgrey; 
   }
-
   
 }
